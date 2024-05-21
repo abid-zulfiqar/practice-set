@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array exercise 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 3. Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array.
+        // Test Data :
+        // console.log(first([7, 9, 0, -2]));
+        // console.log(first([],3));
+        // console.log(first([7, 9, 0, -2],3));
+        // console.log(first([7, 9, 0, -2],6));
+        // console.log(first([7, 9, 0, -2],-3));
+        // Expected Output :
+        // 7
+        // []
+        // [7, 9, 0]
+        // [7, 9, 0, -2]
+        // []
+
+        // function first(array, n) {
+        //     let newArray = [];
+        //     if (n === undefined){  // mtlb ager array ki length di huwi hai lakin array ki value nhi hai tu 
+        //                         return array[0];
+        //     }
+
+        // if (array.length === 0) {  // ager array ki length aur value same ho tu
+        //     return [];
+        // }
+
+        // if(n < 0) {  // mtlb ager array ki length sa value kum di huwi hai tu 
+        //     return [];
+        // }
+
+        // if (array.length <= n) {  // // mtlb ager array ki length sa value zyad di huwi hu tu
+        //     return array;
+        // }
+        //    else{ for (let i = 0; i < n; i++) {
+        //         newArray.push(array[i]);
+        //     }
+
+        //     return newArray;
+        // }
+        // }
+        // console.log(first([7, 9, 0, -2]));       // Output: 7
+        // console.log(first([], 3));               // Output: []
+        // console.log(first([7, 9, 0, -2], 3));    // Output: [7, 9, 0]
+        // console.log(first([7, 9, 0, -2], 6));    // Output: [7, 9, 0, -2]
+        // console.log(first([7, 9, 0, -2], -3));   // Output: []
+
+
+        //  4. Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+        // Test Data :
+        // console.log(last([7, 9, 0, -2]));
+        // console.log(last([7, 9, 0, -2],3));
+        // console.log(last([7, 9, 0, -2],6));
+        // Expected Output :
+
+        function last(array, n) {
+            let newArray = [];
+            if (n === undefined) {  // mtlb ager array ki length di huwi hai lakin array ki value nhi hai tu 
+                return array[3];
+            }
+
+
+
+            if (array.length <= n) {  // // mtlb ager array ki length sa value zyad di huwi hu tu
+                return array;
+            }
+            return array.slice(-n)
+        }
+
+        console.log(last([7, 9, 0, -2]));
+        console.log(last([7, 9, 0, -2], 3));
+        console.log(last([7, 9, 0, -2], 6));
+    </script>
+</body>
+
+</html>

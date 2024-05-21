@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays exercise practice set</title>
+</head>
+<body>
+  
+<!-- alert ko tub use kertai hai jub koi user taik kaam karin y galt kaam kerin -->
+    <script >
+//         1. Write a JavaScript function to check whether an `input` is an array or not.
+// Test Data :
+// console.log(is_array('w3resource'));
+// console.log(is_array([1, 2, 4, 0]));
+// false
+// true)
+
+// let array1=function(input){
+//     if(toString.call(input)==="[object Array]"){
+//         return(true)
+//     }
+//     else{
+//         return(false)
+//     }
+// }
+// console.log(array1([1, 2, 4, 0]))
+// console.log(array1("ghfgh"))
+
+// 2. Write a JavaScript function to clone an array.
+// Test Data :
+// console.log(array_Clone([1, 2, 4, 0]));
+// console.log(array_Clone([1, 2, [4, 0]]));
+// [1, 2, 4, 0]
+// [1, 2, [4, 0]]
+
+//( y aik logical function use kya gya hai )
+
+// clon array k aik function hai jis main array kai all method use kertai hai
+
+let array_Clone=function(array1){
+return(array1.slice(0))
+}
+console.log(array_Clone([1, 2, 4, 0]));
+console.log(array_Clone([1, 2, [4, 0]]));
+
+
+
+// (// 3. Write a JavaScript function to get the first element of an array. Passing the parameter 'n' will return the first 'n' elements of the array.
+// // Test Data :
+// // console.log(first([7, 9, 0, -2]));
+// // console.log(first([],3));
+// // console.log(first([7, 9, 0, -2],3));
+// // console.log(first([7, 9, 0, -2],6));
+// // console.log(first([7, 9, 0, -2],-3));
+// // Expected Output :
+// // 7
+// // []
+// // [7, 9, 0]
+// // [7, 9, 0, -2]
+// // [])
+
+// let n=1;
+// let array2=function(array, n){
+//     if(n>0){
+//         return(array.slice(0, n))
+//     }
+//     else if(n==null){
+//         return(array[0])
+//     }
+//     else if(array==n){
+//         return(array[0])
+//     }
+//     else{
+//         return([])
+//     }
+// }
+//  console.log(array2([7, 9, 0, -2]));
+//  console.log(array2([], 3));
+// console.log(array2([7, 9, 0, -2], 3));
+// console.log(array2([7, 9, 0, -2], 6));
+// console.log(array2([7, 9, 0, -2], -3));
+
+// // Function to get the first n elements of an array
+// var first = function(array, n) {
+//   // Check if the input array is null, return undefined if true
+//   if (array == null)
+//     return void 0;
+
+//   // Check if the value of n is null, return the first element of the array if true
+//   if (n == null)
+//     return array[0];
+
+//   // Check if the value of n is negative, return an empty array if true
+//   if (n < 0)
+//     return [];
+
+//   // Use the slice method to get the first n elements of the array
+//   return array.slice(0, n);
+// };
+
+// // Testing the function with various cases
+// console.log(first([7, 9, 0, -2]));
+// console.log(first([], 3));
+// console.log(first([7, 9, 0, -2], 3));
+// console.log(first([7, 9, 0, -2], 6));
+// console.log(first([7, 9, 0, -2], -3));
+
+
+// (4. Write a JavaScript function to get the last element of an array. Passing the parameter 'n' will return the last 'n' elements of the array.
+// Test Data :
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
+// Expected Output :
+// -2
+// [9, 0, -2]
+// [7, 9, 0, -2])
+
+// 5. Write a simple JavaScript program to join all elements of the following array into a string.
+// Sample array : myColor = ["Red", "Green", "White", "Black"];
+// Expected Output :
+// "Red,Green,White,Black"
+// "Red,Green,White,Black"
+// "Red+Green+White+Black"
+let num = ["red", "green", "white", "black"];
+let c = num.toString('');
+let c1 = num.toString('');
+let c2 = num.join('+');
+console.log(c);
+console.log(c1);
+console.log(c2);
+
+// console.log(num.toString(''))
+
+
+    </script>
+</body>
+</html>

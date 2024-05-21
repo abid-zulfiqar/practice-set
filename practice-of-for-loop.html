@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a=Math.random()*100;
+        // a=Number.parseInt(a)
+        // let inp;
+        // let score=100;
+        // while(inp!=a){
+        //     score=score-1;
+        //     inp=prompt("enter the number :")
+        //     if(inp==a){
+        //         console.log("congradulation you guess correct number")
+        //         console.log(`you guess the actual number in ${100-score} chances`)
+        //     }
+        //     else if(inp>a && inp<100){
+        //         console.log("your number is greater then the actual number")
+        //     }
+        //     else if(inp<a && inp>0){
+        //         console.log("your number is smaller then the actual number")
+        //     }
+        //     else{
+        //         console.log("enter the number between 1 to 100")
+        //     }
+        // }
+       
+
+        // Generate a random number between 1 and 100
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+let score = 100;
+
+// Function to handle user input and check the guess
+function checkGuess() {
+    const guess = parseInt(prompt("Guess the number (between 1 and 100):"));
+
+    // Check if the guess is valid
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+        alert("Please enter a valid number between 1 and 100.");
+        return;
+    }
+
+    // Compare the guess with the random number
+    if (guess === randomNumber) {
+        alert(`Congratulations! You guessed the number ${randomNumber} correctly! Your score is ${score}.`);
+        return;
+    } else if (guess < randomNumber) {
+        alert("Too low! Try a higher number.");
+    } else {
+        alert("Too high! Try a lower number.");
+    }
+
+    // Update the score
+    score -= Math.abs(guess - randomNumber);
+
+    // Recursive call for next guess
+    checkGuess();
+}
+
+// Start the game
+checkGuess();
+
+    </script>
+</body>
+</html>

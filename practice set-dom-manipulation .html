@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+body{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    display: flex;
+    background-color: rgb(189, 197, 197);
+}
+nav  li{
+    list-style: none;
+    padding: 0 23px;
+}
+    </style>
+</head>
+<body>
+      <!-- creat a navbar change the color of first element to red -->
+    <nav>
+        <!-- <ul> -->
+            <li>home</li>
+            <li >contect</li>
+            <li>about</li>
+            <li>home</li>
+            <li>about</li>
+        <!-- </ul> -->
+    </nav>
+    
+    <!-- creat a table without tbody. now use view page "source" button to check wheter it has a tbody or not -->
+    <table>
+        <!-- html main hum jo kuch bhi liktai hai wo sub kuch daikth hai aur ager hum inspect ker kai element main jai tu humain tbody daikai gh tbody essential hoti hai -->
+        <td>home</td>
+        <tr>hello 1</tr>  
+        <tr>hello 2</tr>
+        <tr>hello 3</tr>
+        <tr>hello 4</tr>
+
+    </table>
+
+    <!-- write a javascript code to change background of all <li> tags to red -->
+
+    <script >
+        //   <!-- creat a navbar change the color of first element to red 
+            // console.log(document.getElementsByTagName("nav"))
+            // console.log(document.getElementsByTagName("nav")[0])
+            // console.log(document.getElementsByTagName("nav")[0].firstElementChild)
+            // console.log(document.getElementsByTagName("nav")[0].firstElementChild.firstElementChild)
+            document.getElementsByTagName("nav")[0].firstElementChild.style.color="red" 
+            document.getElementsByTagName("nav")[0].firstElementChild.style.color="green"
+            document.getElementsByTagName("nav")[0].lastElementChild.style.color="green"
+
+   
+    // <!-- write a javascript code to change background of all <li> tags to cyan -->
+Array.from(document.getElementsByTagName("li")).forEach((element) =>{
+    element.style.background="cyan"
+})
+
+// which of the follwing is used to look for the forthest
+    </script>
+</body>
+</html>

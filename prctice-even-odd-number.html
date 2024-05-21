@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //check any number and show its type
+
+
+//     let a1=0;
+//     let a ="hello"
+//     let b ="harry"
+//     let c ="friend"
+//     let d ="abid"
+//     let e ="asger"
+// console.log(typeof c)
+
+
+
+
+
+   // check number of even or odd
+// for (let a=1; a<=200; a++){  
+//     if(a%2 ==0){
+//         console.log(a + "\n");
+//     }  
+// }
+
+
+
+//    check the number of prime number 
+
+let num=parseInt(prompt("enter the number"));
+let i;
+let prime=true;
+if(num<1){
+    alert("is not prime number")
+}
+else{
+    for(i=2; i<num-1; i++){
+        if(num%i==0){
+            prime=false;
+            break;
+        }
+    }
+}
+if(prime==true){
+   alert ("is prime number")
+}
+else{
+  alert  ("is prime number not")
+}
+    </script>
+</body>
+</html>
+
+
